@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | سلاسل بابل لتقنية المعلومات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-contact">
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo" style="display:flex; align-items:center;">
+                    <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="logo-img">
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="domains.html">النطاقات والعروض</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html" class="active">التواصل</a></li>
+                </ul>
+
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content" style="padding-top: 120px; min-height: calc(100vh - 350px);">
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container contact-container">
+                <div class="contact-info fade-in-up">
+                    <h2 class="section-title" style="text-align: right; margin-bottom: 20px;">نحن هنا في خدمتك</h2>
+                    <p class="contact-desc">
+                        يسعدنا في شركة <strong>سلاسل بابل</strong> استقبال استفساراتك وطلباتك.
+                        فريقنا التقني مستعد دائماً لتقديم الدعم لنجاح مشروعك القادم.
+                    </p>
+                    <div class="contact-items">
+                        <div class="contact-item glass-effect-hover">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>العنوان</h4>
+                                <p>مكة المكرمه - الشرائع - مجمع السلام الاداري</p>
+                            </div>
+                        </div>
+                        <div class="contact-item glass-effect-hover">
+                            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4>رقم الهاتف</h4>
+                                <p><span dir="ltr">0537434000</span></p>
+                            </div>
+                        </div>
+                        <div class="contact-item glass-effect-hover">
+                            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p>info@slasel.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper glass-effect fade-in-up delay-1">
+                    <h3 class="form-title">أرسل رسالة</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="الاسم الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="رقم الهاتف">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                                <option value="" disabled selected>اختر الخدمة المطلوبة</option>
+                                <option value="web">تصميم وتطوير المواقع</option>
+                                <option value="hosting">الاستضافة والنطاقات</option>
+                                <option value="cloud">الخدمات السحابية</option>
+                                <option value="security">أمن المعلومات</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="اكتب رسالتك تفصيلياً هنا..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            إرسال الرسالة <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i>
+                        </button>
+                        <div id="formMessage"
+                            style="display:none; margin-top: 15px; color: var(--secondary); text-align: center;">تم
+                            إرسال رسالتك بنجاح! وسوف نتواصل معك في أقرب وقت.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Maps -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container fade-in-up delay-2"
+                style="border-radius: 12px; overflow: hidden; height: 400px; box-shadow: var(--glass-shadow); padding: 0;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115858.749028889!2d46.74558087948332!3d24.725350993049104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f038ed04d49a3%3A0x6b40342ab77ecac1!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="footer-contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> مكة المكرمه - الشرائع - مجمع السلام الاداري</li>
+                    <li><i class="fa-solid fa-phone"></i> <span dir="ltr">0537434000</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> info@slasel.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-col" style="display: flex; justify-content: center; align-items: center;">
+                <img src="imgaes/images.png" alt="صورة"
+                    style="max-width: 100%; height: auto; max-height: 160px; border-radius: 8px;">
+            </div>
+
+            <div class="footer-col" style="display: flex; justify-content: flex-end; align-items: center;">
+                <a href="index.html" class="logo footer-logo" style="display:inline-block;">
+                    <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="footer-logo-img">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-links-bar">
+                    <a href="#">الشروط والاحكام</a>
+                    <span class="footer-links-separator">|</span>
+                    <a href="#">خريطه الموقع</a>
+                    <span class="footer-links-separator">|</span>
+                    <a href="#">الوظائف</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>جميع الحقوق محفوظه لدي سلاسل بابل لتقنيه المعلومات &copy; 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
