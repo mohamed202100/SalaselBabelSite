@@ -18,6 +18,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 1b. Mobile Dropdown Toggle (click to open/close)
+    const dropdownItems = document.querySelectorAll('.has-dropdown');
+    dropdownItems.forEach(item => {
+        const link = item.querySelector(':scope > a');
+        link.addEventListener('click', (e) => {
+            // Only toggle on mobile (when burger menu is visible)
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                item.classList.toggle('open');
+                // Close other dropdowns
+                dropdownItems.forEach(other => {
+                    if (other !== item) other.classList.remove('open');
+                });
+            }
+        });
+    });
+
     // 2. Sticky Header
     const header = document.querySelector('.header');
 

@@ -16,17 +16,45 @@
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <a href="index.html" class="logo" style="display:flex; align-items:center;">
-                    <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="logo-img">
+                <a href="index.html" class="logo">
+                    <img src="imgaes/015.svg" alt="سلاسل بابل" class="logo-img">
                 </a>
 
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">الرئيسية</a></li>
-                    <li><a href="services.html">خدماتنا</a></li>
-                    <li><a href="domains.html">النطاقات والعروض</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html">الخدمات<i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html"> شهادات SSL</a>
+                            </li>
+                            <li><a href="services.html">أمان الموقع الالكتروني</a>
+                            </li>
+                            <li><a href="services.html">اصلاح موقع ويب
+                                    مخترق</a>
+                            </li>
+                            <li><a href="services.html">شبكة توصيل
+                                    المحتوي(CDN)</a></li>
+                            <li><a href="services.html">الأمن السيبرانى</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="cloud.html">الخدمات السحابية</a></li>
+                    <li>
+                        <a href="domains.html">النطاقات</a>
+                    </li>
+                    <li><a href="offers.html">العروض</a></li>
                     <li><a href="about.html">من نحن</a></li>
                     <li><a href="contact.html">التواصل</a></li>
+                    <li class="btn-login-mobile">
+                        <a href="#" class="btn-login">
+                            <i class="fa-solid fa-circle-user"></i> تسجيل الدخول
+                        </a>
+                    </li>
                 </ul>
+
+                <a href="#" class="btn-login btn-login-desktop">
+                    <i class="fa-solid fa-circle-user"></i> تسجيل الدخول
+                </a>
 
                 <button class="mobile-menu-btn">
                     <i class="fa-solid fa-bars"></i>
@@ -46,13 +74,81 @@
                         نقدم خدمات تصميم وتطوير المواقع، الاستضافة، الخدمات السحابية، والأمن السيبراني.
                     </p>
                     <div class="hero-buttons">
-                        <a href="services.html" class="btn btn-primary">استكشف خدماتنا</a>
+                        <a href="services.html" class="btn btn-primary">استكشف الخدمات</a>
                         <a href="contact.html" class="btn btn-outline">تواصل معنا</a>
                     </div>
                 </div>
                 <div class="hero-image fade-in-up delay-1">
-                    <img src="imgaes/SalaselBabelSite.png" alt="Salasel Babel"
-                        style="max-width: 80%; max-height: 380px; object-fit: contain; mix-blend-mode: multiply;">
+                    <img src="imgaes/main.png" alt="Salasel Babel"
+                        style="max-width: 90%; max-height: 390px; object-fit: contain; mix-blend-mode: multiply;">
+                </div>
+            </div>
+        </section>
+
+        <section id="ideal-solutions" class="section">
+            <div class="container">
+                <div class="section-header text-center fade-in-up">
+                    <h2 class="section-title">الحلول المثالية لك</h2>
+                    <p class="section-subtitle">لم تجد ما تبحث عنه؟ نحن نساعدك في تحديد أفضل الحلول لتطوير أعمالك</p>
+                </div>
+
+                <div class="solutions-grid">
+                    <!-- Item 1 -->
+                    <a href="#" class="solution-card fade-in-up">
+                        <div class="solution-icon">
+                            <img src="https://exahost.com/wp-content/uploads/2025/09/document-code.webp"
+                                alt="الخدمات السحابية">
+                        </div>
+                        <h3>الخدمات السحابية</h3>
+                        <p>نحن نساعدك في تحديد أفضل الطرق لتحسين عملك</p>
+                    </a>
+
+                    <!-- Item 2 -->
+                    <a href="#" class="solution-card fade-in-up delay-1">
+                        <div class="solution-icon">
+                            <img src="https://exahost.com/wp-content/uploads/2025/09/setting-5.svg"
+                                alt="ادارة السيرفرات">
+                        </div>
+                        <h3>ادارة السيرفرات</h3>
+                        <p>فريق الدعم الفني متاح 24 ساعة علي مدار الاسبوع ليهتم بأداء سيرفرك</p>
+                    </a>
+
+                    <!-- Item 3 -->
+                    <a href="#" class="solution-card fade-in-up delay-2">
+                        <div class="solution-icon">
+                            <img src="https://exahost.com/wp-content/uploads/2025/09/5a988e97a9daa423e1e877bb72b1f465.png"
+                                alt="الاستضافة المشتركة">
+                        </div>
+                        <h3>الاستضافة المشتركة</h3>
+                        <p>حلول الاستضافة المشتركة ، تناسب موقعك وأعمالك. مميزات غير محدودة</p>
+                    </a>
+
+                    <!-- Item 4 -->
+                    <a href="#" class="solution-card fade-in-up">
+                        <div class="solution-icon">
+                            <img src="https://exahost.com/wp-content/uploads/2025/09/brush.svg" alt="تطوير المواقع">
+                        </div>
+                        <h3>تطوير المواقع</h3>
+                        <p>اختر الموقع المناسب، وسيتم تخصيصه كُلياً ليناسب نشاطك.</p>
+                    </a>
+
+                    <!-- Item 5 -->
+                    <a href="#" class="solution-card fade-in-up delay-1">
+                        <div class="solution-icon">
+                            <img src="https://exahost.com/wp-content/uploads/2025/09/mobile.svg" alt="السيرفرات الخاصة">
+                        </div>
+                        <h3>السيرفرات الخاصة</h3>
+                        <p>أحدث السيرفرات الخاصة من إكساء أفضل الحلول للمواقع الكبيرة</p>
+                    </a>
+
+                    <!-- Item 6 -->
+                    <a href="#" class="solution-card fade-in-up delay-2">
+                        <div class="solution-icon">
+                            <img src="https://exahost.com/wp-content/uploads/2025/09/shapes.svg" alt="امن سيبراني">
+                        </div>
+                        <h3>امن سيبراني</h3>
+                        <p>نحن نساعدك في تحديد أفضل الطرق لتحسين عملك</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -73,6 +169,25 @@
                 </div>
             </div>
         </section>
+
+        <!-- Promo Banner Section -->
+        <section class="promo-banner-section fade-in-up">
+            <div class="container">
+                <div class="promo-cards-grid" style="grid-template-columns: 1fr;">
+                    <a href="services.html" class="promo-card" style="max-width: 480px; margin: 0 auto;">
+                        <div class="promo-card-img">
+                            <img src="imgaes/change.jpeg" alt="موقعك بطيء؟ غيّر الآن مع سلاسل بابل">
+                        </div>
+                        <div class="promo-card-label">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>اكتشف خدمات الاستضافة</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
     </main>
     <footer class="footer">
         <div class="container footer-container">
@@ -85,13 +200,23 @@
                 </ul>
             </div>
 
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#">الاسئلة الشائعة</a></li>
+                    <li><a href="pay.html">طرق الدفع</a></li>
+                    <li><a href="#">مكتبة الشروحات</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
             <div class="footer-col" style="display: flex; justify-content: center; align-items: center;">
                 <img src="imgaes/images.png" alt="صورة"
                     style="max-width: 100%; height: auto; max-height: 160px; border-radius: 8px;">
             </div>
 
             <div class="footer-logo-img" style="display: flex; justify-content: flex-end; align-items: center;">
-                   <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="footer-logo-img">
+                <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="footer-logo-img">
             </div>
         </div>
         <div class="footer-bottom">
@@ -102,6 +227,14 @@
                     <a href="#">خريطه الموقع</a>
                     <span class="footer-links-separator">|</span>
                     <a href="#">الوظائف</a>
+                </div>
+                <!-- Payment Methods Section -->
+                <div class="payment-methods">
+                    <div class="payment-item" title="Visa"><i class="fa-brands fa-cc-visa"></i></div>
+                    <div class="payment-item" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></div>
+                    <div class="payment-item" title="Apple Pay"><i class="fa-brands fa-apple-pay"></i></div>
+                    <div class="payment-item" title="Amazon Pay"><i class="fa-brands fa-amazon-pay"></i></div>
+                    <div class="payment-item" title="Mada"><i class="fa-solid fa-credit-card"></i></div>
                 </div>
                 <div class="footer-copyright">
                     <p>جميع الحقوق محفوظه لدي سلاسل بابل لتقنيه المعلومات &copy; 2026</p>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طرق الدفع | سلاسل بابل لتقنية المعلومات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .payment-page-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bank-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bank-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #D4AF37, #F1C40F);
+        }
+
+        .bank-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 1.5rem;
+        }
+
+        .bank-logo-img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #fdfcf9;
+            padding: 5px;
+            border: 1px solid #eee;
+        }
+
+        .bank-info-title h2 {
+            font-size: 1.6rem;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .bank-info-title p {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .info-row {
+            margin-bottom: 1.8rem;
+        }
+
+        .info-label {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .info-value-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #eaedf0;
+            transition: all 0.3s ease;
+        }
+
+        .info-value-box:hover {
+            border-color: var(--secondary);
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.05);
+        }
+
+        .info-value {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        .copy-btn {
+            background: var(--secondary);
+            color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .copy-btn:hover {
+            transform: scale(1.1);
+            background: #b8962d;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .copy-btn i {
+            font-size: 1.1rem;
+        }
+
+        .toast-message {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .toast-message.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="page-pay">
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="imgaes/015.svg" alt="سلاسل بابل" class="logo-img">
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html">الخدمات <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html"> شهادات SSL</a></li>
+                            <li><a href="services.html">أمان الموقع الالكتروني</a></li>
+                            <li><a href="services.html">اصلاح موقع ويب مخترق</a></li>
+                            <li><a href="services.html">شبكة توصيل المحتوي(CDN)</a></li>
+                            <li><a href="services.html">الأمن السيبرانى</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cloud.html">الخدمات السحابية</a></li>
+                    <li><a href="domains.html">النطاقات</a></li>
+                    <li><a href="offers.html">العروض</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">التواصل</a></li>
+                </ul>
+
+                <a href="#" class="btn-login btn-login-desktop">
+                    <i class="fa-solid fa-circle-user"></i> تسجيل الدخول
+                </a>
+
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content" style="padding-top: 140px; padding-bottom: 60px; min-height: 80vh;">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2 class="section-title">طرق الدفع المتاحة</h2>
+                <p class="section-subtitle">يمكنكم إتمام عملية الدفع عبر التحويل البنكي المباشر للحساب الأدنى.</p>
+            </div>
+
+            <div class="payment-page-container fade-in-up delay-1">
+                <!-- Alinma Bank Card -->
+                <div class="bank-card shadow-sm">
+                    <div class="bank-header">
+                        <img src="imgaes/inmaa.jpeg" alt="مصرف الإنماء" class="bank-logo-img">
+                        <div class="bank-info-title">
+                            <h2>مصرف الإنماء</h2>
+                            <p>Alinma Bank</p>
+                        </div>
+                    </div>
+
+                    <div class="bank-details">
+                        <!-- Account Holder -->
+                        <div class="info-row">
+                            <span class="info-label">اسم الحساب</span>
+                            <div class="info-value-box">
+                                <span class="info-value" style="font-family: 'Cairo', sans-serif;">شركة سلاسل بابل
+                                    لتقنية المعلومات</span>
+                                <button class="copy-btn" onclick="copyText('شركة سلاسل بابل لتقنية المعلومات', this)"
+                                    title="نسخ">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Account Number -->
+                        <div class="info-row">
+                            <span class="info-label">رقم الحساب</span>
+                            <div class="info-value-box">
+                                <span class="info-value" id="account-num">68206673657000</span>
+                                <button class="copy-btn" onclick="copyText('68206673657000', this)" title="نسخ">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- IBAN -->
+                        <div class="info-row">
+                            <span class="info-label">رقم الآيبان (IBAN)</span>
+                            <div class="info-value-box">
+                                <span class="info-value" id="iban-num">SA0805000068206673657000</span>
+                                <button class="copy-btn" onclick="copyText('SA0805000068206673657000', this)"
+                                    title="نسخ">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-box"
+                    style="background: rgba(212, 175, 55, 0.05); border: 1px dashed var(--secondary); padding: 1.5rem; border-radius: 12px; text-align: center; color: var(--text-main);">
+                    <i class="fa-solid fa-circle-info" style="color: var(--secondary); margin-left: 8px;"></i>
+                    بعد إتمام عملية التحويل، يرجى إرسال صورة إيصال الدفع عبر البريد الإلكتروني أو الواتساب لمتابعة
+                    طلبكم.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast-message">تم النسخ إلى الحافظة!</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="footer-contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> مكة المكرمه - الشرائع - مجمع السلام الاداري</li>
+                    <li><i class="fa-solid fa-phone"></i> <span dir="ltr">0537434000</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> info@slasel.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#">الاسئلة الشائعة</a></li>
+                    <li><a href="pay.html">طرق الدفع</a></li>
+                    <li><a href="#">مكتبة الشروحات</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" style="display: flex; justify-content: center; align-items: center;">
+                <img src="imgaes/images.png" alt="صورة"
+                    style="max-width: 100%; height: auto; max-height: 160px; border-radius: 8px;">
+            </div>
+
+            <div class="footer-logo-img" style="display: flex; justify-content: flex-end; align-items: center;">
+                <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="footer-logo-img">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-links-bar">
+                    <a href="#">الشروط والاحكام</a>
+                    <span class="footer-links-separator">|</span>
+                    <a href="#">خريطه الموقع</a>
+                    <span class="footer-links-separator">|</span>
+                    <a href="#">الوظائف</a>
+                </div>
+                <!-- Payment Methods Section -->
+                <div class="payment-methods">
+                    <div class="payment-item" title="Visa"><i class="fa-brands fa-cc-visa"></i></div>
+                    <div class="payment-item" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></div>
+                    <div class="payment-item" title="Apple Pay"><i class="fa-brands fa-apple-pay"></i></div>
+                    <div class="payment-item" title="Amazon Pay"><i class="fa-brands fa-amazon-pay"></i></div>
+                    <div class="payment-item" title="Mada"><i class="fa-solid fa-credit-card"></i></div>
+                </div>
+                <div class="footer-copyright">
+                    <p>جميع الحقوق محفوظه لدي سلاسل بابل لتقنيه المعلومات &copy; 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyText(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+
+                // Change icon temporarily
+                const originalIcon = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+                btn.style.background = '#27ae60';
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    btn.innerHTML = originalIcon;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

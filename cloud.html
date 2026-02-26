@@ -1,16 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معنا | سلاسل بابل لتقنية المعلومات</title>
+    <title>الخدمات السحابية | سلاسل بابل لتقنية المعلومات</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page-contact">
+<body class="page-cloud">
 
     <header class="header">
         <div class="container">
@@ -37,7 +37,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="cloud.html">الخدمات السحابية</a></li>
+                    <li><a href="cloud.html" class="active">الخدمات السحابية</a></li>
                     <li>
                         <a href="domains.html">النطاقات</a>
                     </li>
@@ -63,84 +63,43 @@
     </header>
 
     <main class="page-content" style="padding-top: 120px; min-height: calc(100vh - 350px);">
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container contact-container">
-                <div class="contact-info fade-in-up">
-                    <h2 class="section-title" style="text-align: right; margin-bottom: 20px;">نحن هنا في خدمتك</h2>
-                    <p class="contact-desc">
-                        يسعدنا في شركة <strong>سلاسل بابل</strong> استقبال استفساراتك وطلباتك.
-                        فريقنا التقني مستعد دائماً لتقديم الدعم لنجاح مشروعك القادم.
-                    </p>
-                    <div class="contact-items">
-                        <div class="contact-item glass-effect-hover">
-                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
-                            <div>
-                                <h4>العنوان</h4>
-                                <p>مكة المكرمه - الشرائع - مجمع السلام الاداري</p>
-                            </div>
+        <!-- Cloud Services Section -->
+        <section id="cloud-info" class="section">
+            <div class="container fade-in-up">
+                <div class="section-header text-center">
+                    <h2 class="section-title">الخدمات السحابية</h2>
+                    <p class="section-subtitle">ارتقِ بأعمالك إلى السحابة مع حلولنا الآمنة، المرنة، والموثوقة.</p>
+                </div>
+
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-cloud" style="font-size: 2.2rem; color: var(--secondary);"></i>
                         </div>
-                        <div class="contact-item glass-effect-hover">
-                            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <h4>رقم الهاتف</h4>
-                                <p><span dir="ltr">0537434000</span></p>
-                            </div>
+                        <h3>استضافة ومخدمات سحابية</h3>
+                        <p>بنية تحتية مرنة تتوسع مع نمو أعمالك لضمان أداء مستقر وسريع لمواقعك وتطبيقاتك في جميع الأوقات.
+                        </p>
+                    </div>
+
+                    <div class="solution-card delay-1">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-database" style="font-size: 2.2rem; color: var(--secondary);"></i>
                         </div>
-                        <div class="contact-item glass-effect-hover">
-                            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <h4>البريد الإلكتروني</h4>
-                                <p>info@slasel.com</p>
-                            </div>
+                        <h3>تخزين سحابي آمن</h3>
+                        <p>مساحات تخزين ضخمة، موثوقة ومحميّة بالكامل لحفظ بياناتك وملفاتك الحساسة مع سهولة الوصول من أي
+                            مكان.</p>
+                    </div>
+
+                    <div class="solution-card delay-2">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-clock-rotate-left"
+                                style="font-size: 2.2rem; color: var(--secondary);"></i>
                         </div>
+                        <h3>النسخ الاحتياطي (Backup)</h3>
+                        <p>حماية تامة لبياناتك من الفقدان والضياع من خلال خطط نسخ احتياطي دورية وتلقائية متعددة المواقع.
+                        </p>
                     </div>
                 </div>
-
-                <div class="contact-form-wrapper glass-effect fade-in-up delay-1">
-                    <h3 class="form-title">أرسل رسالة</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="الاسم الكامل" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="البريد الإلكتروني" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder="رقم الهاتف">
-                        </div>
-                        <div class="form-group">
-                            <select id="service" required>
-                                <option value="" disabled selected>اختر الخدمة المطلوبة</option>
-                                <option value="web">تصميم وتطوير المواقع</option>
-                                <option value="hosting">الاستضافة والنطاقات</option>
-                                <option value="cloud">الخدمات السحابية</option>
-                                <option value="security">أمن المعلومات</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="اكتب رسالتك تفصيلياً هنا..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            إرسال الرسالة <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i>
-                        </button>
-                        <div id="formMessage"
-                            style="display:none; margin-top: 15px; color: var(--secondary); text-align: center;">تم
-                            إرسال رسالتك بنجاح! وسوف نتواصل معك في أقرب وقت.</div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- Google Maps -->
-        <section class="section" style="padding-top: 0;">
-            <div class="container fade-in-up delay-2"
-                style="border-radius: 12px; overflow: hidden; height: 400px; box-shadow: var(--glass-shadow); padding: 0;">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115858.749028889!2d46.74558087948332!3d24.725350993049104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f038ed04d49a3%3A0x6b40342ab77ecac1!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
@@ -166,6 +125,7 @@
                     <li><a href="contact.html">تواصل معنا</a></li>
                 </ul>
             </div>
+
 
             <div class="footer-col" style="display: flex; justify-content: center; align-items: center;">
                 <img src="imgaes/images.png" alt="صورة"

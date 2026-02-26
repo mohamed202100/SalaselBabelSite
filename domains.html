@@ -15,17 +15,45 @@
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <a href="index.html" class="logo" style="display:flex; align-items:center;">
-                    <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="logo-img">
+                <a href="index.html" class="logo">
+                    <img src="imgaes/015.svg" alt="سلاسل بابل" class="logo-img">
                 </a>
 
                 <ul class="nav-links">
                     <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="services.html">خدماتنا</a></li>
-                    <li><a href="domains.html" class="active">النطاقات والعروض</a></li>
+                    <li class="has-dropdown">
+                        <a href="services.html">الخدمات <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="services.html"> شهادات SSL</a>
+                            </li>
+                            <li><a href="services.html">أمان الموقع الالكتروني</a>
+                            </li>
+                            <li><a href="services.html">اصلاح موقع ويب
+                                    مخترق</a>
+                            </li>
+                            <li><a href="services.html">شبكة توصيل
+                                    المحتوي(CDN)</a></li>
+                            <li><a href="services.html">الأمن السيبرانى</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="cloud.html">الخدمات السحابية</a></li>
+                    <li>
+                        <a href="domains.html">النطاقات</a>
+                    </li>
+                    <li><a href="offers.html">العروض</a></li>
                     <li><a href="about.html">من نحن</a></li>
                     <li><a href="contact.html">التواصل</a></li>
+                    <li class="btn-login-mobile">
+                        <a href="#" class="btn-login">
+                            <i class="fa-solid fa-circle-user"></i> تسجيل الدخول
+                        </a>
+                    </li>
                 </ul>
+
+                <a href="#" class="btn-login btn-login-desktop">
+                    <i class="fa-solid fa-circle-user"></i> تسجيل الدخول
+                </a>
 
                 <button class="mobile-menu-btn">
                     <i class="fa-solid fa-bars"></i>
@@ -112,6 +140,69 @@
                     </div>
 
                 </div>
+
+                <!-- Domain Features Section (Like Ideal Solutions) -->
+                <div class="section-header text-center fade-in-up" style="margin-top: 6rem;">
+                    <h2 class="section-title">لماذا تحجز مع سلاسل بابل لتقنية المعلومات؟</h2>
+                    <p class="section-subtitle">نوفر لك كل المزايا التي تجعل إدارة حضورك الرقمي أسهل وأكثر أماناً.</p>
+                </div>
+
+                <div class="solutions-grid">
+                    <!-- Feature 1 -->
+                    <div class="solution-card fade-in-up">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h3>تحكم كامل بالـ DNS</h3>
+                        <p>لوحة تحكم سهلة وسريعة لإدارة جميع سجلات النطاق (A, MX, CNAME) بكل احترافية.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="solution-card fade-in-up delay-1">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+                        <h3>حماية بيانات WHOIS</h3>
+                        <p>نحمي خصوصية بياناتك الشخصية ونمنع وصول المزعجين والمتطفلين لمعلومات مالك النطاق.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="solution-card fade-in-up delay-2">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-rotate"></i>
+                        </div>
+                        <h3>تجديد تلقائي ذكي</h3>
+                        <p>لا تقلق أبداً من ضياع نطاقك، ستقوم أنظمتنا بتنبيهك وتجديد نطاقك قبل موعد انتهائه.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="solution-card fade-in-up">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <h3>بريد إلكتروني مهني</h3>
+                        <p>احصل على عناوين بريد إلكتروني باسم شركتك عند حجز أي نطاق جديد لتعزيز هويتك المهنية.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="solution-card fade-in-up delay-1">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <h3>نظام قفل النطاق</h3>
+                        <p>حماية فائقة من محاولات النقل غير المصرح بها لنطاقك من خلال تفعيل خاصية القفل التلقائي.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="solution-card fade-in-up delay-2">
+                        <div class="solution-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3>دعم فني مختص</h3>
+                        <p>فريقنا التقني جاهز لمساعدتك في ربط نطاقك بأي استضافة خارجية وحل أي مشكلات فنية.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -128,13 +219,23 @@
                 </ul>
             </div>
 
+            <div class="footer-col">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#">الاسئلة الشائعة</a></li>
+                    <li><a href="pay.html">طرق الدفع</a></li>
+                    <li><a href="#">مكتبة الشروحات</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+
             <div class="footer-col" style="display: flex; justify-content: center; align-items: center;">
                 <img src="imgaes/images.png" alt="صورة"
                     style="max-width: 100%; height: auto; max-height: 160px; border-radius: 8px;">
             </div>
 
             <div class="footer-logo-img" style="display: flex; justify-content: flex-end; align-items: center;">
-                   <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="footer-logo-img">
+                <img src="imgaes/SalaselBabelSite.png" alt="سلاسل بابل" class="footer-logo-img">
             </div>
         </div>
         <div class="footer-bottom">
@@ -145,6 +246,14 @@
                     <a href="#">خريطه الموقع</a>
                     <span class="footer-links-separator">|</span>
                     <a href="#">الوظائف</a>
+                </div>
+                <!-- Payment Methods Section -->
+                <div class="payment-methods">
+                    <div class="payment-item" title="Visa"><i class="fa-brands fa-cc-visa"></i></div>
+                    <div class="payment-item" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></div>
+                    <div class="payment-item" title="Apple Pay"><i class="fa-brands fa-apple-pay"></i></div>
+                    <div class="payment-item" title="Amazon Pay"><i class="fa-brands fa-amazon-pay"></i></div>
+                    <div class="payment-item" title="Mada"><i class="fa-solid fa-credit-card"></i></div>
                 </div>
                 <div class="footer-copyright">
                     <p>جميع الحقوق محفوظه لدي سلاسل بابل لتقنيه المعلومات &copy; 2026</p>
